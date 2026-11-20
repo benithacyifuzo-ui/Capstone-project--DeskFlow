@@ -54,6 +54,12 @@ The project was developed as a frontend capstone project using React and browser
 
 ![DeskFlow Settings](screenshots/settings.png)
 
+## Project Presentation
+
+You can view the capstone presentation below:
+
+[View DeskFlow Capstone Presentation (PDF)](presentation/DeskFlow_Capstone_Presentation.pdf)
+
 ## Technologies Used
 
 - **React** – Building the user interface.
