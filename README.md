@@ -1,166 +1,148 @@
 # DeskFlow – Helpdesk Ticket Management System
 
-## 1. Project Overview
+DeskFlow is a React-based helpdesk ticket management system designed to help users create, track, update, and manage support tickets through a simple and organized interface.
 
-DeskFlow is a web-based Helpdesk Ticket Management System developed using React. It is designed to help organizations manage support requests, track ticket progress, and organize support activities through a simple and user-friendly interface.
+## Project Links
 
-The application allows users to create, view, edit, search, and manage support tickets. It also includes dashboard statistics, user authentication, profile settings, and appearance preferences.
+- **Live Demo:** [Open DeskFlow](https://capstone-project-deskflow.onrender.com)
+- **GitHub Repository:** [View Source Code](https://github.com/benithacyifuzo-ui/Capstone-project--DeskFlow)
 
-The current version is a frontend application that uses browser LocalStorage to store data.
+## Project Overview
 
-## 2. Project Objectives
+Managing support requests can become difficult when tickets are not properly organized or tracked. DeskFlow provides a simple interface for managing support tickets, monitoring their progress, and keeping ticket information organized.
 
-The main objectives of DeskFlow are to:
+The project was developed as a frontend capstone project using React and browser LocalStorage for data persistence.
 
-- Simplify the process of creating and managing support tickets.
-- Make it easier to monitor ticket progress and status.
-- Provide a dashboard for viewing important ticket statistics.
-- Allow users to manage their profiles and preferences.
-- Provide an organized and user-friendly interface.
-- Explore role-based access and staff management.
+## Main Features
 
-## 3. Technologies Used
+- **Dashboard:** Displays ticket statistics, including total, pending, in-progress, and resolved tickets.
+- **Create Tickets:** Allows users to submit new support tickets.
+- **View All Tickets:** Displays available tickets in one place.
+- **Search and Filter:** Helps users find tickets by searching and filtering ticket information.
+- **Ticket Details:** Allows users to view individual ticket information.
+- **Edit Tickets:** Allows ticket information to be updated.
+- **Update Ticket Status:** Tickets can be moved between different statuses.
+- **Delete Tickets:** Allows tickets to be removed.
+- **Settings:** Allows users to manage profile information and application preferences.
+- **Theme Support:** Includes light and dark themes.
+- **LocalStorage:** Saves application data in the browser so it can remain available after refreshing the page.
+- **Staff Management:** Includes a staff management interface that is still being tested and refined.
 
-| Technology   | Purpose                                |
-| ------------ | -------------------------------------- |
-| React.js     | Building the user interface            |
-| JavaScript   | Application functionality and logic    |
-| HTML5        | Structuring the application            |
-| CSS3         | Styling and responsive design          |
-| React Router | Navigation between application pages   |
-| Lucide React | Icons                                  |
-| Vite         | Development environment and build tool |
-| LocalStorage | Saving application data in the browser |
+## Application Screenshots
 
-## 4. Features Implemented
+### Login Screen
+
+![DeskFlow Login](screenshots/login.png)
 
 ### Dashboard
 
-- Displays total tickets.
-- Shows pending, in-progress, and resolved tickets.
-- Displays recent tickets.
-- Provides quick navigation to important actions.
+![DeskFlow Dashboard](screenshots/dashboard.png)
 
-### Ticket Management
+### All Tickets
 
-- Create new support tickets.
-- View all available tickets.
-- View individual ticket details.
-- Edit ticket information.
-- Update ticket status.
-- Delete tickets with confirmation.
-- Search tickets by title, description, and category.
-- Filter tickets by status.
+![DeskFlow All Tickets](screenshots/all-tickets.png)
 
-### User Authentication
+### Create Ticket
 
-- Welcome screen.
-- User registration.
-- User login.
-- Logout functionality.
-- Basic administrator and staff role handling.
-
-### Settings
-
-- Update profile information.
-- Change between light and dark themes.
-- Save preferences.
-- Set a default ticket priority.
+![DeskFlow Create Ticket](screenshots/create-ticket.png)
 
 ### Staff Management
 
-- Staff account management interface.
-- Add staff accounts.
-- View staff accounts.
-- Activate and deactivate staff accounts.
+![DeskFlow Staff Management](screenshots/staff-management.png)
 
-_Note: Staff management is part of the current development work and should be tested before being considered fully complete._
+### Settings
 
-## 5. Application Pages
+![DeskFlow Settings](screenshots/settings.png)
+
+## Technologies Used
+
+- **React** – Building the user interface.
+- **JavaScript** – Application functionality and logic.
+- **HTML5** – Page structure.
+- **CSS3** – Styling and responsive layouts.
+- **Vite** – Development server and build tool.
+- **React Router** – Navigation between application pages.
+- **Lucide React** – Icons.
+- **LocalStorage API** – Storing application data in the browser.
+- **Git and GitHub** – Version control and project hosting.
+- **Render** – Deploying the application.
+
+## Pages and Navigation
 
 DeskFlow includes the following main pages:
 
-- **Dashboard:** Displays ticket statistics and recent activities.
-- **Create Ticket:** Allows users to submit new support requests.
-- **All Tickets:** Displays and manages support tickets.
-- **Ticket Details:** Shows individual ticket information and allows updates.
-- **Settings:** Allows users to manage their profile and application preferences.
-- **Staff Management:** Provides an interface for managing staff accounts.
-- **Authentication Screen:** Handles registration and login.
+| Page             | Description                                         |
+| ---------------- | --------------------------------------------------- |
+| Login            | Provides the application entry screen.              |
+| Dashboard        | Displays ticket statistics and recent tickets.      |
+| Create Ticket    | Provides a form for creating new tickets.           |
+| All Tickets      | Displays and manages available tickets.             |
+| Ticket Details   | Shows detailed information about a selected ticket. |
+| Settings         | Manages profile information and preferences.        |
+| Staff Management | Provides a staff management interface.              |
 
-## 6. APIs and React Concepts Used
+## React Concepts and Browser APIs Used
 
-### Browser LocalStorage API
+During development, I worked with several React concepts and browser features:
 
-LocalStorage is used to store application data in the browser, including:
+- `useState` for managing application state.
+- `useEffect` for handling side effects and saving data.
+- React Router for navigation between pages.
+- Component-based architecture for organizing the application.
+- Props for passing information between components.
+- LocalStorage for saving and retrieving application data.
+- Conditional rendering for displaying different application states.
 
-- Ticket information.
-- User profile information.
-- Registered accounts.
-- Theme preferences.
-- Application settings.
+## Challenges and Solutions
 
-This allows saved data to remain available after refreshing the page.
+| Challenge                              | Solution                                                         |
+| -------------------------------------- | ---------------------------------------------------------------- |
+| Managing ticket information            | Used React state to manage ticket data.                          |
+| Keeping data after refreshing the page | Implemented LocalStorage to persist application data.            |
+| Navigating between pages               | Used React Router to create application routes.                  |
+| Managing different ticket statuses     | Added status updates and filtering functionality.                |
+| Organizing the application             | Divided the project into reusable components and separate pages. |
+| Creating a consistent design           | Used shared CSS styles and a consistent color palette.           |
 
-### React Hooks
+## Getting Started
 
-- `useState`: Manages application state, including tickets, profiles, and themes.
-- `useEffect`: Handles side effects such as saving data to LocalStorage.
+To run the project locally:
 
-### React Router
+### 1. Install Dependencies
 
-Used to navigate between different pages without reloading the entire application.
+```bash
+npm install
+```
 
-**Important:** The current version does not use an external backend API. LocalStorage is a browser storage API, not a server-side database.
+### 2. Start the Development Server
 
-## 7. Challenges and Solutions
+```bash
+npm run dev
+```
 
-During development, several challenges were encountered:
+### 3. Open the Application
 
-| Challenges                                              | Solutions                                                              |
-| ------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Managing ticket information across different components | Used React state and reusable component structures.                    |
-| Losing data after refreshing the browser                | Implemented LocalStorage persistence.                                  |
-| Navigating between different pages                      | Integrated React Router.                                               |
-| Updating ticket information correctly                   | Created functions for editing tickets and updating their status.       |
-| Managing light and dark themes                          | Implemented theme state and saved the selected theme in LocalStorage.  |
-| Organizing the application structure                    | Divided the application into reusable components and separate pages.   |
-| Handling user roles                                     | Introduced role-based interface handling for administrators and staff. |
-
-## 8. Getting Started
-
-### Requirements
-
-- Node.js
-- npm
-- Visual Studio Code or another code editor.
-
-### Running the Project
-
-1. Open the DeskFlow project folder in Visual Studio Code.
-2. Open the integrated terminal.
-3. Install the project dependencies:
-
-   ```bash
-   npm install
-   ```
-
-4. Start the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open the local URL displayed in the terminal in your browser.
-
-## 9. Project Structure
-
-The project is organized into components and pages to make the code easier to manage and maintain.
+Open the local URL displayed in your terminal, usually:
 
 ```text
-deskflow/
+http://localhost:5173
+```
+
+## Project Structure
+
+```text
+DeskFlow/
 │
 ├── public/
+│
+├── screenshots/
+│   ├── login.png
+│   ├── dashboard.png
+│   ├── all-tickets.png
+│   ├── create-ticket.png
+│   ├── staff-management.png
+│   └── settings.png
+│
 ├── src/
 │   ├── components/
 │   │   └── Sidebar.jsx
@@ -183,45 +165,34 @@ deskflow/
 └── vite.config.js
 ```
 
-## 10. Future Improvements
+_Note: This is a simplified overview of the project structure._
 
-Future versions of DeskFlow could include:
+## Data Storage and Security
 
-- Develop a backend API.
-- Integrate a database such as MySQL.
-- Implement secure authentication and authorization.
-- Allow administrators to assign tickets to specific staff members.
-- Develop separate dashboards for administrators and staff.
-- Introduce an activity log to track ticket creation and updates.
-- Add email notifications for ticket updates.
-- Generate reports and analytics.
-- Enable data sharing across multiple devices and users.
+DeskFlow currently uses the browser's LocalStorage API to store application data. This means data is saved in the browser being used and is not shared automatically between different users or devices.
 
-## 11. Current Limitations
+The current authentication is a frontend demonstration. It is not a production-ready authentication system, and sensitive information such as passwords should not be stored in LocalStorage in a real application.
 
-- The application currently operates as a frontend-only system.
-- Data is stored in the browser's LocalStorage.
-- Data is not automatically shared between different computers or browsers.
-- Authentication is a demonstration and is not suitable for production use.
-- A backend and database are required for secure, centralized data management.
+## Future Improvements
 
-## 12. Credits
+Some improvements that could be added in future versions include:
 
-DeskFlow was developed using the following technologies and learning resources:
+- Connecting the application to a backend API.
+- Using a database to store tickets and user information.
+- Implementing secure user authentication and authorization.
+- Improving staff management functionality.
+- Adding email notifications for ticket updates.
+- Supporting multiple users and shared ticket management.
+- Improving deployment and direct-route refresh support.
 
-- **React:** User interface development.
-- **Vite:** Development and build tooling.
-- **React Router:** Page navigation.
-- **Lucide React:** Interface icons.
-- **MDN Web Docs:** Web development documentation and reference.
-- **React Documentation:** React learning and reference.
+## Project Status
 
-Additional credit should be given to any instructors, tutorials, or learning resources that contributed to the development of this project.
+DeskFlow is a frontend capstone project. Its main ticket management features, dashboard, settings, and browser-based data persistence have been implemented. Some areas, including staff management and deployment routing, still require further testing and refinement.
 
-## 13. Project Status
+## Author
 
-DeskFlow is currently a frontend development project. Its core ticket management functionality, dashboard, authentication interface, and settings have been developed. Additional features, including staff management and role-based functionality, are being tested and refined.
+Developed as a frontend development capstone project using React, JavaScript, HTML, and CSS.
 
----
+## Acknowledgements
 
-**DeskFlow – Making Support Ticket Management Simpler and More Organized.**
+Thanks to the instructors and everyone who provided guidance and support throughout the development of this project.
